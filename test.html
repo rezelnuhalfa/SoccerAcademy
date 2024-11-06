@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Soccer Academy</title>
+    <link rel="icon" type="image/png" href="images/png-transparent-sports-time-logo-football-future-football-academy-emblem-label-logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/png-transparent-sports-time-logo-football-future-football-academy-emblem-label-logo.png" alt="Logo Klub" class="logo">
+        <h1>SFA United</h1> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
+                <li><a href="store.html">Store</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="test-container">
+         
+        <div class="registration-box">
+            <p><strong>Nama:</strong> <span id="display-name"></span></p>
+            <p><strong>Umur:</strong> <span id="display-age"></span></p>
+            <p><strong>Posisi:</strong> <span id="display-position"></span></p>
+            <p><strong>Alamat:</strong> <span id="display-address"></span></p>
+            <p><strong>Prestasi:</strong> <span id="display-achievement"></span></p>
+            <p><strong>Lokasi Test:</strong> <span id="display-location">Lapangan Pujon</span></p>
+            <p><strong>Waktu Test:</strong> <span id="display-time">15:00</span></p>
+            <p><strong>Harga Pendaftaran:</strong> <span id="display-price">Rp 200.000</span></p>
+            <p>Semoga Keterima,GOOD LUCK😊😊⚽</p>
+        </div>
+    </div>
+    
+    
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            const name = localStorage.getItem('name');
+            const age = localStorage.getItem('age');
+            const position = localStorage.getItem('position');
+            const address = localStorage.getItem('address');
+            const achievement = localStorage.getItem('achievement');
+            const additional = localStorage.getItem('additional'); 
+
+            
+            document.getElementById('display-name').textContent = name;
+            document.getElementById('display-age').textContent = age;
+            document.getElementById('display-position').textContent = position;
+            document.getElementById('display-address').textContent = address;
+            document.getElementById('display-achievement').textContent = achievement || "Tidak ada prestasi yang dimasukkan.";
+            document.getElementById('display-additional').textContent = additional || "Terserah";
+        });
+    </script>
+</body>
+</html>
